@@ -1,0 +1,20 @@
+[
+	{
+		"name": "Awesome Unit",
+		"id": 1,
+		"movementRange": 2,
+		"energyCost": 2,
+		"maxHealth": 20,
+		"createCooldown": 0,
+		"activeLimit": 5
+	},
+	{
+		"name": "l0lz unit",
+		"id": 2,
+		"movementRange": 3,
+		"energyCost": 2,
+		"maxHealth": 15,
+		"createCooldown": 0,
+		"activeLimit": 3
+	}
+]

@@ -1,0 +1,31 @@
+{
+
+	"username": "taapesh",
+	"level": 1,
+	"unitLimit": 2,
+	"builds": [
+		{
+			"name": "Test Build 1",
+			"unitChoices": [
+				{
+					"unitId": 1,
+					"slotId": 1
+				},
+				{
+					"unitId": 2,
+					"slotId": 2
+				}
+			]
+		},
+		{
+			"name": "Test Build 2",
+			"unitChoices": [
+				{
+					"unitId": 2,
+					"slotId": 1
+				}
+			]
+		}
+	],
+	"activeBuild": 0
+}
