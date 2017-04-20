@@ -46,9 +46,4 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-
-    private void OnLevelWasLoaded(int level)
-    {
-
-    }
 }

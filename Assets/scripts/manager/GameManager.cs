@@ -24,18 +24,18 @@ public class GameManager : Singleton<GameManager> {
 
     public GameObject playerPrefab;
 
-    void Start() {
-        InitGame();
-    }
+    //void Start() {
+    //    InitGame();
+    //}
 
-    void InitGame() {
-        this.build = MainController.Instance.GetUser().GetActiveBuild();
-        int numTiles = TileManager.Instance.GenerateTiles();
-        TileManager.Instance.InitTileArray(numTiles);
-        SpawnPlayers();
-        turnTimer = secondsPerTurn;
-        InvokeRepeating("CountdownTurn", 0f, 1f);
-    }
+    //void InitGame() {
+    //    this.build = MainController.Instance.GetUser().GetActiveBuild();
+    //    int numTiles = TileManager.Instance.GenerateTiles();
+    //    TileManager.Instance.InitTileArray(numTiles);
+    //    SpawnPlayers();
+    //    turnTimer = secondsPerTurn;
+    //    InvokeRepeating("CountdownTurn", 0f, 1f);
+    //}
 
     public void Lock() {
         lockCount++;

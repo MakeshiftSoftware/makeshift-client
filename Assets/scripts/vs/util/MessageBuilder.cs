@@ -31,4 +31,11 @@ class MessageBuilder
         m.Add(MessageProperty.USERNAME, user.GetUsername());
         return m;
     }
+
+    public static Message CreateNotifyOnlineMessage(User user)
+    {
+        Message m = new Message(MessageType.NOTIFY_ONLINE);
+        m.Add(MessageProperty.RECIPIENTS, user.GetFriendIds());
+        return m;
+    }
 }

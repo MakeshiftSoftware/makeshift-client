@@ -1,17 +1,18 @@
-﻿using System;
+﻿ using System;
 using SimpleJSON;
 using UnityEngine;
 
 public class GameClient
 {
-    public GameController controller;
-    public static MessageHandler messageHandler;
     private User user;
     private SocketClient socialClient;
     private SocketClient matchmakingClient;
     private SocketClient gameClient;
     private Action loginSuccess;
     private Action loginError;
+
+    public static MessageHandler messageHandler;
+    public GameController controller;
 
     public GameClient(GameController controller)
     {
@@ -71,7 +72,10 @@ public class GameClient
         {
             this.loginSuccess();
         }
-        // TODO: Notify friends of online status
+
+        Message m = MessageBuilder.CreateNotifyOnlineMessage(this.user);
+        this.socialClient.SendMessage(m);
+
         // Temporary: Connect to matchmaking and try to find match immediately
         ConnectToMatchmakingServer();
     }
@@ -107,6 +111,11 @@ public class GameClient
     {
         Debug.Log("Connected to game server");
         this.gameClient.JoinGame(this.user);
+    }
+
+    public void SendChat()
+    {
+
     }
 
     public void Disconnect()

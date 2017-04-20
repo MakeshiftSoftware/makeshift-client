@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
+﻿using System;
 
 [Serializable]
-public class UnitData {
-    public int id;
+public class UnitData
+{
+    public int _id;
     public string name;
     public int movementRange;
     public int energyCost;
@@ -12,31 +11,39 @@ public class UnitData {
     public int activeLimit;
     public int createCooldown;
 
-    public int GetId() {
-        return this.id;
+    public int GetId()
+    {
+        return this._id;
     }
 
-    public string GetName() {
+    public string GetName()
+    {
         return this.name;
     }
 
-    public int GetMovementRange() {
+    public int GetMovementRange()
+    {
         return this.movementRange;
     }
 
-    public int GetEnergyCost() {
+    public int GetEnergyCost()
+    {
         return this.energyCost;
     }
 
-    public int GetMaxHealth() {
+    public int GetMaxHealth()
+    {
         return this.maxHealth;
     }
 
-    public int GetActiveLimit() {
+    public int GetActiveLimit()
+    {
         return this.activeLimit;
     }
 
-    public int GetCreateCooldown() {
+    public int GetCreateCooldown()
+    {
         return this.createCooldown;
     }
 }
+
